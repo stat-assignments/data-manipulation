@@ -1,0 +1,61 @@
+---
+title: "Homework 6: Data Manipulation"
+author: "Your Name"
+date: "March 4, 2024"
+output: html_document
+---
+
+The Gapminder project's mission is to fight devastating ignorance with a fact-based worldview everyone can understand. To do this, they assemble reliable data about a variety of global variables to help educate the general public.
+
+I have collected data from Gapminder about several variables: 
+
+- Population
+- GDP Per Capita (inflation-adjusted US dollars)
+- Mean Household Income
+- CO2 emissions (tonnes per capita)
+- Energy Use (Kg of Oil-equivalent per capita)
+
+Use the data manipulation tools you've learned about to answer each of the following questions, which I've grouped into several general topics. Some questions may specify a specific language to use; if no language is specified, you may choose whether to use R or python to answer the question.
+
+## Read In the Data
+
+Read in the data in R and Python. In both languages, store the table in the variable `gapminder`. 
+
+```{r, include = F}
+
+```
+
+```{python}
+
+```
+
+
+
+## Data Exploration
+
+### Missingness
+
+Gapminder puts a lot of effort into curating certain variables; other variables are less frequently used (or are harder to assemble from reliable sources). 
+
+#### CO2
+Create a table of all countries with at least 30 observations CO2. Your table should be called `co2_sum` and should have columns `country` and `n_obs`. Do not print out the table; instead, if you have done everything correctly, when your document is compiled the correct number of countries will be filled in in the sentence below the code chunk.
+
+<!-- Use R -->
+```{r, echo = T}
+
+```
+
+There are `r nrow(co2_sum)` countries with at least 30 years of CO2 data.
+
+#### Energy
+Answer in Python
+
+```{python}
+
+```
+
+
+#### Income
+
+#### GDP
+
