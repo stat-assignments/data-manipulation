@@ -5,6 +5,11 @@ date: "March 4, 2024"
 output: html_document
 ---
 
+```{r}
+co2_sum <- data.frame() # This is here to be a blank data frame so that the 
+                        # lines below work before you've filled your code in.
+```
+
 The Gapminder project's mission is to fight devastating ignorance with a fact-based worldview everyone can understand. To do this, they assemble reliable data about a variety of global variables to help educate the general public.
 
 I have collected data from Gapminder about several variables: 
