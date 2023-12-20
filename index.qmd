@@ -5,11 +5,6 @@ date: "March 4, 2024"
 output: html_document
 ---
 
-```{r}
-co2_sum <- data.frame() # This is here to be a blank data frame so that the 
-                        # lines below work before you've filled your code in.
-```
-
 The Gapminder project's mission is to fight devastating ignorance with a fact-based worldview everyone can understand. To do this, they assemble reliable data about a variety of global variables to help educate the general public.
 
 I have collected data from Gapminder about several variables: 
@@ -43,16 +38,32 @@ Read in the data in R and Python. In both languages, store the table in the vari
 Gapminder puts a lot of effort into curating certain variables; other variables are less frequently used (or are harder to assemble from reliable sources). 
 
 #### CO2
-Create a table of all countries with at least 30 observations CO2. Your table should be called `co2_sum` and should have columns `country` and `n_obs`. Do not print out the table; instead, if you have done everything correctly, when your document is compiled the correct number of countries will be filled in in the sentence below the code chunk.
+Create a table of all countries with at least 30 observations of the CO2 variable. Your table should be called `co2_sum` and should have columns `country` and `n_obs`. Do not print out the table; instead, if you have done everything correctly, when your document is compiled the correct number of countries will be filled in in the sentence below the code chunk.
 
 <!-- Use R -->
 ```{r, echo = T}
+co2_sum <- data.frame() # This is a blank data frame so that the lines below 
+                        # work before you've filled your code in.
+                        # You can write your code below this line, or remove 
+                        # these lines, whichever you prefer.
 
 ```
 
-There are `r nrow(co2_sum)` countries with at least 30 years of CO2 data.
+There are `r nrow(co2_sum)` countries with at least 30 years of CO2 data. On average, countries have `r mean(co2_sum$n_obs)` years of data.
 
 #### Energy
+
+For each country with defined energy data for at least 10 years, summarize the data by computing the following:
+
+
+
+- year of minimum energy consumption per capita
+- year of maximum energy consumption per capita
+- average rate of energy consumption change from min to max.    
+A rough estimate might be something like (max consumption - min consumption)/(max year - min year). This may not include the most recent data; that is ok.
+
+Your summary data frame, `energy_sum` should have one row for each country, with columns `yearmin`, `yearmax`, and `avgincrease`.
+
 Answer in Python
 
 ```{python}
@@ -62,5 +73,8 @@ Answer in Python
 
 #### Income
 
+Locate the country which has had the biggest growth in income between 1980 and 2019. Create a simple line graph or scatter plot showing the income in this country (and only this country) over time.
+
 #### GDP
 
+Locate the country which had the biggest decrease (or smallest increase, if there are no decreases) in GDP between 1990 and 2022. Include only countries with at least 5 years of reported data between 1990 and 2022. Create a simple line graph or scatter plot showing the GDP in this country for all years which this information is provided.
