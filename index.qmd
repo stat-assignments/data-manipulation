@@ -1,7 +1,8 @@
 ---
-title: "Homework 6: Data Manipulation"
+title: "Homework: Data Manipulation"
+execute:
+  error: true
 author: "Your Name"
-date: "March 4, 2024"
 output: html_document
 ---
 
